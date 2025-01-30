@@ -51,7 +51,6 @@ def chat():
 
     response = requests.post(OLLAMA_URL, json=payload)
     output = response.json()
-    print(output)
     ai_response = output.get("response", "Error")
 
     # Load existing chat history
